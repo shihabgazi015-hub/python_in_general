@@ -1,4 +1,45 @@
 # This folder is made to number the files of a particular folder in a specific way
+
 [![Up to Date](https://github.com/ikatyang/emoji-cheat-sheet/workflows/Up%20to%20Date/badge.svg)](https://github.com/ikatyang/emoji-cheat-sheet/actions?query=workflow%3A%22Up+to+Date%22)
+
+
+A simple, lightweight Python utility script to automatically rename all files within a directory into an ordered, zero-padded numerical sequence (e.g., `001.jpg`, `002.png`). 
+
+This script is safe to run directly inside your working directory and automatically skips itself during the renaming process.
+
+## 🚀 Features
+
+- **Sequential Numbering:** Renames files cleanly using an index count.
+- **Zero-Padding:** Formats numbers with leading zeros (e.g., `001`, `002`) to maintain correct OS file sorting.
+- **Extension Preservation:** Automatically keeps original file extensions intact.
+- **Self-Exclusion:** Safely ignores the script file itself so it won't be accidentally renamed.
+- **Cross-Platform:** Uses Python's `pathlib` module to ensure compatibility across Windows, macOS, and Linux.
+
+## 📦 Prerequisites
+
+You only need **Python 3.6** or higher installed on your system. No external libraries or `pip` installations are required.
+
+## 🛠️ Usage
+
+1. Place the Python script (`image_renamer.py`) directly into the folder containing the files you want to rename.
+2. Open your terminal or command prompt inside that folder.
+3. Run the script using the following command:
+
+```bash
+python image_renamer.py
+```
+
+## ⚙️ Configuration
+
+If you want to customize how the script behaves, open the file and look for the configuration variables at the bottom:
+
+- `ZERO_PAD`: Controls how many digits the numbers will have. Default is `3` (e.g., `001`). Change to `4` for thousands (e.g., `0001`).
+- `TARGET_FOLDER`: Set to `Path(__file__).parent` by default to target the current directory, but can be updated to any absolute file path.
+
+## ⚠️ Warning
+
+Bulk file renaming **cannot be undone** via the operating system's standard "Undo" shortcut. It is highly recommended to **back up your files** or test the script on a duplicate folder before running it on your main production assets.
+
+
 
 * I had made a mistake while pushing the code from my local pc, unfortunately I had pushed it to the wrong folder of GitHub and hence I had to manually move the files on GitHub
